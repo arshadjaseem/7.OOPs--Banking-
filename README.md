@@ -1,5 +1,4 @@
-# 7.OOPs--Banking-
-class BankAccount:
+
 def __init__(self, account_holder, password, balance=0):
     self.account_holder = account_holder
     self.password = password
