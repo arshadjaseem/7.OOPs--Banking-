@@ -1,42 +1,27 @@
 
-def __init__(self, account_holder, password, balance=0):
-    self.account_holder = account_holder
-    self.password = password
-    self.balance = balance
+# Python-banking-system
 
-def login(self, input_password):
-    if self.password == input_password:
-        print(f"\nWelcome {self.account_holder}!")
-        return True
-    else:
-        print("Incorrect password.")
-        return False
+The program simulates a simple banking system where a user can:
 
-def deposit(self, amount):
-    self.balance += amount
-    print(f"Deposited: ${amount}. New balance: ${self.balance}")
+1. Log in to their account using a password.
+2. Deposit money into their account.
+3. Withdraw money from their account (if they have enough funds).
+4. Check their account balance.
+5. Exit the program.
 
-def withdraw(self, amount):
-    if amount <= self.balance:
-        self.balance -= amount
-        print(f"Withdrew: ${amount}. New balance: ${self.balance}")
-    else:
-        print("Insufficient funds.")
+How It Works:
+1. Account Creation:
+A bank account is created with the name "Thoukeela", password "1234", and a starting balance of $100.
+2. Login:
+The user is asked to enter their password. If it matches the account's password ("1234"), they can access the account features.
+3. Menu Options: 
+Once logged in, the user can choose to:
+Deposit: Add money to the account.
+Withdraw: Take money from the account (only if they have enough funds).
+Check Balance: See the current balance in the account.
+Exit: Quit the program.
+4. Looping Until Exit:
+After each action, the menu is shown again until the user chooses the "Exit" option.
 
-def check_balance(self):
-    print(f"Your balance is: ${self.balance}")
-if name == "main": account = BankAccount("arshad", "1234", 100) password = input("Enter your password to log in: ") if account.login(password): while True: print("\nChoose an option: \n1. Deposit \n2. Withdraw \n3. Check Balance \n4. Exit") choice = input("Enter your choice (1/2/3/4): ")
-
-        if choice == '1':
-            amount =float(input("Enter amount to deposit: "))
-            account.deposit(amount)
-        elif choice == '2':
-            amount =float(input("Enter amount to withdraw: "))
-            account.withdraw(amount)
-        elif choice == '3':
-            account.check_balance()
-        elif choice == '4':
-            print("Exiting...")
-            break
-        else:
-            print("Invalid option. Please try again.")
+Summary:
+The program lets the user manage their account by logging in and performing basic banking operations (deposit, withdrawal, checking balance).
